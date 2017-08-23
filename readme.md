@@ -9,7 +9,7 @@ Please use the following citation:
   title = {Representation Learning for Answer Selection with LSTM-Based Importance Weighting},
   author = {R{\"u}ckl{\'e}, Andreas and Gurevych, Iryna},
   publisher = {Association for Computational Linguistics},
-  booktitle = {Proceedings of the 10th International Conference on Computational Semantics (IWCS 2013)},
+  booktitle = {Proceedings of the 12th International Conference on Computational Semantics (IWCS 2017)},
   pages = {(to appear)},
   month = sep,
   year = {2017},
