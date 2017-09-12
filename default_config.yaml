@@ -1,0 +1,19 @@
+# this is the default configuration file which is used for default settings
+
+logger:
+  level: INFO
+
+data-module:
+model-module: # Must be set to the module where the experiment is located
+training-module:
+evaluation-module:
+
+global: # global config for all components
+
+data: # your experiment config
+
+model: # your experiment config
+
+training: # your experiment config
+
+evaluation: # your experiment config

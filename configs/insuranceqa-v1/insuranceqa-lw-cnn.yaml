@@ -1,0 +1,49 @@
+data-module: experiment.qa.data.insuranceqa.v1
+model-module: experiment.qa.model.lw_cnn
+training-module: experiment.qa.train.training_dynamic
+evaluation-module: experiment.qa.evaluation.evaluation
+
+logger:
+  level: DEBUG
+  path: <path-to>/logs/insuranceqa-lw-cnn.txt
+
+global:
+  question_length: 56
+  answer_length: 200
+  embedding_size: 100
+
+data:
+  lowercased: true
+  embeddings_path: <path-to>/glove.6B/glove.6B.100d.txt
+  insuranceqa: <path-to>/insuranceQA
+  map_oov: true
+  map_numbers: false
+
+model:
+  filters: 400
+  filter_size: 3
+  lw_cell_size: 141
+  shared_lw: true
+  margin: 0.2
+  trainable_embeddings: true
+
+training:
+  save_folder: <path-to>/checkpoints/insuranceqa-lw-cnn
+  epochs: 100
+  early_stopping_patience: 9
+  dropout: 0.3
+
+  optimizer: adam
+  initial_learning_rate: 0.0004
+  dynamic_learning_rate: false
+
+  scorer: accuracy
+  scorer_print:
+    - map
+    - mrr
+
+  negative_answers: 50
+  negative_answers_valid: 50
+
+  batchsize: 20
+  batchsize_valid: 200

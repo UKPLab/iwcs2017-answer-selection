@@ -1,0 +1,47 @@
+data-module: experiment.qa.data.wikiqa.wikiqa
+model-module: experiment.qa.model.cnn
+training-module: experiment.qa.train.training_dynamic
+evaluation-module: experiment.qa.evaluation.evaluation
+
+logger:
+  level: DEBUG
+  path: <path-to>/logs/wikiqa-cnn.txt
+
+global:
+  question_length: 22
+  answer_length: 200
+  embedding_size: 300
+
+data:
+  lowercased: false
+  embeddings_path: <path-to>/glove.840B.300d.txt
+  wikiqa: <path-to>/WikiQACorpus
+  map_oov: true
+  map_numbers: false
+
+model:
+  filters: 600
+  filter_size: 3
+  margin: 0.5
+  trainable_embeddings: true
+
+training:
+  save_folder: <path-to>/checkpoints/wikiqa-cnn
+  epochs: 100
+  early_stopping_patience: 4
+
+  optimizer: sgd
+  initial_learning_rate: 1.1
+  dynamic_learning_rate: true
+  dropout: 0.6
+
+  scorer: map
+  scorer_print:
+    - accuracy
+    - mrr
+
+  negative_answers: 50
+  negative_answers_valid: 500
+
+  batchsize: 20
+  batchsize_valid: 200
