@@ -11,7 +11,6 @@ Please use the following citation:
   author = {R{\"u}ckl{\'e}, Andreas and Gurevych, Iryna},
   publisher = {Association for Computational Linguistics},
   booktitle = {Proceedings of the 12th International Conference on Computational Semantics (IWCS 2017)},
-  pages = {(to appear)},
   month = sep,
   year = {2017},
   location = {Montpellier, France}
