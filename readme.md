@@ -1,5 +1,7 @@
 # Representation Learning for Answer Selection with LSTM-Based Importance Weighting
 
+Paper: [http://www.aclweb.org/anthology/W17-6935](http://www.aclweb.org/anthology/W17-6935)
+
 The source code in this project allows you to replicate our results reported in the 
 associated paper. The project can also be used as a starting point for new experiments.
 
